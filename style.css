@@ -1,6 +1,13 @@
 /* DM Sans Font import */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
+/* global resets */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Color variables */
 :root{
     /* Primary Colors */
@@ -18,4 +25,72 @@ body {
     background-color: var(--cream);
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
+
+
 }
+
+.component-container{
+   min-height: 100vh;
+   max-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.expense-chart {
+    width: 500px;
+}
+
+
+
+.balance {
+    background-color: var(--soft-red);
+    color: white;
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.balance p {
+    font-weight: 400;
+    font-size: .75rem;
+}
+
+.balance h3 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    padding-top: .2rem;
+}
+
+.circles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: center;
+}
+
+.white-circle, .brown-circle {
+    grid-row: 1/2;
+}
+
+.brown-circle {
+    background-color: var(--dark-brown);
+    height: 35px;
+    width:35px;
+    border-radius: 50%;
+    grid-column: 2/-1;
+}
+
+.white-circle {
+    border: 2px solid white;
+    height: 35px;
+    width:35px;
+    border-radius: 50%;
+    grid-column: 1 / -2;
+    z-index: 1;
+    
+}
+
+.spending {
+    background-color: white;
+}
+
